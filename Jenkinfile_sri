@@ -2,8 +2,8 @@ pipelne {
 
 	agent any
 	tools {
-  		
-}
+ 		 maven 'm360'
+		}
 
 	stages {
  	 stage('build') {
@@ -13,16 +13,16 @@ pipelne {
 }
 
 stage('test') {
-	step  {
-		sh ´echo a`
+	steps  {
+		sh 'echo a'
 	   }
    	post {
 		always {
-   	 archiveArtifacts artifacts: 'target/**.jar', followSymlinks: false
+   		 archiveArtifacts artifacts: 'target/**.jar', followSymlinks: false
     	 junit stdioRetention: '', testResults: 'target/surefire-reports/*.xml'
 	}
 }
-
     }
+
   }
 }

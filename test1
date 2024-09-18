@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             parallel {
-               //stage('Build A') {
+               stage('Build A') {
                     steps {
                         echo 'Building A'
                         // Your build commands for A
@@ -17,7 +17,7 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
+        //stage('Test') {
             steps {
                 echo 'Running tests'
                 // Your test commands

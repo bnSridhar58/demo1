@@ -1,7 +1,6 @@
 pipeline {
 	agent {
 }
-
 	
 	stages {
 		stage ('build') {

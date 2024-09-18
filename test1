@@ -9,7 +9,7 @@ pipeline {
                         // Your build commands for A
 }
                 }
-                stage('Build B') {
+                //stage('Build B') {
                     steps {
                         echo 'Building B'
                         // Your build commands for B
